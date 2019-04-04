@@ -18,9 +18,32 @@
 <link rel="stylesheet" type="text/css" href="engine1/style.css" />
 <script type="text/javascript" src="engine1/jquery.js"></script>
 <!-- End WOWSlider.com HEAD section -->
+<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+</script>
 </head>
 
-<body>
+<body onLoad="MM_preloadImages('imagenes/diamundial.jpg','imagenes/camp.jpg','imagenes/comba.jpg','imagenes/sanitaria.jpg','imagenes/no.jpg')">
 <div data-role="page" id="Principal" data-theme="a">
  <div data-role="header" data-add-back-btn="true" data-back-btn-text="Regresar" data-back-btn-theme="b">
   <h1>Dia mundial de la salud 7 de abril</h1>
@@ -126,12 +149,12 @@ Día Mundial de la Salud 2018 - Todo el mundo tiene un papel que desempeñar</p>
   <div data-role="content" align="center">
    
    <div>
-  <img src="imagenes/cuandoseselebra.jpg" width="50%" height="50%" alt="mod1">
-  <p>El 7 de abril de 1945 se constituyó oficialmente la Organización Mundial de la Salud, y su primera designación pública consistió en crear un día que, aparte de conmemorar el aniversario de la legalización de la OMS, se dedicara a promover hábitos sanos en las personas y a generar campañas que concienticen sobre enfermedades que agigantan la tasa de mortalidad en el planeta.
-
-Es así como el Día Mundial de la Salud se erigió como el primer acto oficial de la OMS, conmemorándose por primera vez el 22 de julio de 1949, con la finalidad de celebrar la constitución de la Organización. Sin embargo, se cambió la fecha para el 7 de abril, pensando en incentivar la participación de los estudiantes, puesto que en Julio la mayoría de las instituciones educativas están de vacaciones.
-
-“Esta celebración anual desde 1950 utiliza un lema y un tema diferente cada año. La selección del tema, la hace el Director General de la OMS, basado en las sugerencias de los gobiernos miembros y de sus funcionarios”,  señala la OMS.</p>
+  <img src="imagenes/cuandoseselebra.jpg" name="cuandoseselebra" width="800" height="350" id="cuandoseselebra" onMouseOver="MM_swapImage('cuandoseselebra','','imagenes/diamundial.jpg',1)">
+<p>El 7 de abril de 1945 se constituyó oficialmente la Organización Mundial de la Salud, y su primera designación pública consistió en crear un día que, aparte de conmemorar el aniversario de la legalización de la OMS, se dedicara a promover hábitos sanos en las personas y a generar campañas que concienticen sobre enfermedades que agigantan la tasa de mortalidad en el planeta.
+  
+  Es así como el Día Mundial de la Salud se erigió como el primer acto oficial de la OMS, conmemorándose por primera vez el 22 de julio de 1949, con la finalidad de celebrar la constitución de la Organización. Sin embargo, se cambió la fecha para el 7 de abril, pensando en incentivar la participación de los estudiantes, puesto que en Julio la mayoría de las instituciones educativas están de vacaciones.
+  
+  “Esta celebración anual desde 1950 utiliza un lema y un tema diferente cada año. La selección del tema, la hace el Director General de la OMS, basado en las sugerencias de los gobiernos miembros y de sus funcionarios”,  señala la OMS.</p>
 <a href="https://seguimiento.co/mundo/por-que-se-celebra-el-dia-mundial-de-la-salud-5376"target="_self">¿quieres saber mas?</a>
 
   </div>
@@ -152,7 +175,7 @@ Es así como el Día Mundial de la Salud se erigió como el primer acto oficial 
  </div>
   <div data-role="content" align="center">
    <div>
-  <img src="imagenes/campsalud.jpg" width="50%" height="50%" alt="mod2"> </div>
+    <img src="imagenes/campsalud.jpg" name="campsalud" width="170" height="240" id="campsalud" onMouseOver="MM_swapImage('campsalud','','imagenes/camp.jpg',1)" onMouseOut="MM_swapImgRestore();MM_swapImgRestore()"></div>
   <p>Las campañas mundiales de salud pública son una gran oportunidad para aumentar la concienciación y los conocimientos sobre los problemas de salud y para movilizar apoyos en todos los ámbitos, desde el local hasta el internacional.
 
 A lo largo del año hay muchos días mundiales sobre problemas de salud o afecciones concretas: de la “A” de Alzheimer a la “Z” de zoonosis.
@@ -176,7 +199,7 @@ Sin embargo, la OMS presta especial atención a los siete días y a la semana qu
  </div>
   <div data-role="content" align="center">
    <div>
-  <img src="imagenes/haceoms.jpg" width="50%" height="35%" alt="mod3"> </div>
+    <img src="imagenes/haceoms.jpg" name="haceoms" width="245" height="163" id="haceoms" onMouseOver="MM_swapImage('haceoms','','imagenes/comba.jpg',1)" onMouseOut="MM_swapImgRestore()"></div>
   <p>La OMS se rige por la Asamblea Mundial de la Salud, formada por representantes de los ciento noventa y tres países miembros de la organización. Esta asamblea se reúne todos los meses de mayo.
 
 Seis oficinas regionales que gozan de una autonomía bastante amplia componen la OMS: la EMRO (Oficina Regional para el Mediterráneo Oriental), la Organización Panamericana de la Salud (Oficina Regional para las Américas), la AFRO (Oficina Regional para África), la WPRO (Oficina Regional para el Pacífico Occidental), la EURO (Oficina Regional para Europa) y la SEARO (Oficina Regional para Asia Sur-Oriental)
@@ -197,8 +220,7 @@ Seis oficinas regionales que gozan de una autonomía bastante amplia componen la
   <h1>cobertura sanitaria</h1>
  </div>
   <div data-role="content" align="center">
-   <div>
-  <img src="imagenes/cobersan.jpg" width="50%" height="50%" alt="mod4"> </div>
+   <div><img src="imagenes/cobersan.jpg" name="cobersan" width="944" height="443" id="cobersan" onMouseOver="MM_swapImage('cobersan','','imagenes/sanitaria.jpg',1)" onMouseOut="MM_swapImgRestore()"></div>
   <p>La cobertura sanitaria universal (CSU) implica que todas las personas y comunidades reciban los servicios de salud que necesitan sin tener que pasar penurias financieras para pagarlos. Abarca toda la gama de servicios de salud esenciales de calidad, desde la promoción de la salud hasta la prevención, el tratamiento, la rehabilitación y los cuidados paliativos.
 
 La CSU permite a todos acceder a servicios que atienden las causas más importantes de las enfermedades y la muerte, y asegura que la calidad de esos servicios sea suficientemente buena para mejorar la salud de las personas que los reciben.
@@ -220,8 +242,7 @@ Proteger a las personas de las consecuencias financieras que puede tener el pago
   <h1>que no incluye?</h1>
  </div>
   <div data-role="content" align="center">
-   <div>
-  <img src="imagenes/noincluye.jpg" width="50%" height="50%" alt="mod5"> </div>
+   <div><img src="imagenes/noincluye.jpg" name="noinluye" width="966" height="461" id="noinluye" onMouseOver="MM_swapImage('noinluye','','imagenes/no.jpg',1)" onMouseOut="MM_swapImgRestore()"></div>
   <p>Cerca de la mitad de la población mundial carece de acceso integral a los servicios sanitarios básicos.
 Cerca de 100 millones de personas se ven abocadas a la pobreza extrema (es decir, viven con US$ 1,90 al mes o menos) por tener que pagar los servicios de salud de su propio bolsillo.
 Más de 800 millones de personas (casi el 12% de la población mundial) gastan al menos un 10% de su presupuesto familiar para pagar los servicios de salud.

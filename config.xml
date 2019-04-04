@@ -5,10 +5,10 @@
      id    = "com.phonegap.app3"  
      version  = "1.0.0">  
 	 
-   <name> app2-Especialidad tecnico en programacion </name>  
+   <name> app3- dia mundial de la salud</name>  
    
    <description>  
-     Aplicacion que muestra informacion sobre la especialidad de tecnico en programacion CBTis
+     Aplicacion que muestra informacion sobre el dia mundial de la salud
    </description>  
    
    <author href="https://build.phonegap.com" email="marcoantoniotorresaguilar23@gmail.com">  
